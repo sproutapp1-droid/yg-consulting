@@ -16,7 +16,7 @@ export default function AnnouncementBar() {
   const items = ANNOUNCE_KEYS.map((key) => t(key));
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-bg-dark text-white/80 text-xs md:text-sm py-2 overflow-hidden">
+    <div className="fixed top-0 left-0 right-0 z-30 bg-bg-dark text-white/80 text-xs md:text-sm py-2 overflow-hidden">
       <div className="trust-scroll-container animate-scroll-left">
         {[...items, ...items].map((text, i) => (
           <span

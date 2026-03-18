@@ -61,7 +61,7 @@ export default function Hero() {
                 </div>
 
                 <motion.div
-                  className="absolute -left-8 md:-left-16 top-12 bg-white rounded-card px-4 py-3 shadow-card"
+                  className="hidden md:block absolute -left-8 md:-left-16 top-12 bg-white rounded-card px-4 py-3 shadow-card"
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 >
@@ -70,7 +70,7 @@ export default function Hero() {
                 </motion.div>
 
                 <motion.div
-                  className="absolute -right-6 md:-right-12 top-1/3 bg-white rounded-card px-4 py-3 shadow-card"
+                  className="hidden md:block absolute -right-6 md:-right-12 top-1/3 bg-white rounded-card px-4 py-3 shadow-card"
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                 >
@@ -79,7 +79,7 @@ export default function Hero() {
                 </motion.div>
 
                 <motion.div
-                  className="absolute -left-4 md:-left-10 bottom-16 bg-white rounded-card px-4 py-3 shadow-card"
+                  className="hidden md:block absolute -left-4 md:-left-10 bottom-16 bg-white rounded-card px-4 py-3 shadow-card"
                   animate={{ y: [0, -6, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 >

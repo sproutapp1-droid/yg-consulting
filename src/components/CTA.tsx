@@ -84,7 +84,7 @@ export default function CTA() {
                     name="name"
                     type="text"
                     required
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3.5 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
                     placeholder={t("formNamePlaceholder")}
                   />
                 </div>
@@ -100,7 +100,7 @@ export default function CTA() {
                     name="email"
                     type="email"
                     required
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3.5 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
                     placeholder={t("formEmailPlaceholder")}
                   />
                 </div>
@@ -117,7 +117,7 @@ export default function CTA() {
                   id="company"
                   name="company"
                   type="text"
-                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3.5 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
                   placeholder={t("formCompanyPlaceholder")}
                 />
               </div>
@@ -134,7 +134,7 @@ export default function CTA() {
                   name="message"
                   rows={4}
                   required
-                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent resize-none"
+                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3.5 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent resize-none"
                   placeholder={t("formMessagePlaceholder")}
                 />
               </div>

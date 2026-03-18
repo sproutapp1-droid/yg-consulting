@@ -26,7 +26,7 @@ export default function LanguageDropdown() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 text-sm font-medium text-text-primary hover:text-primary transition-colors px-2 py-1.5 rounded-lg hover:bg-primary/5"
+        className="flex items-center gap-1.5 text-sm font-medium text-text-primary hover:text-primary transition-colors px-3 py-2.5 rounded-lg hover:bg-primary/5"
         aria-label="Select language"
         aria-expanded={open}
       >
@@ -43,7 +43,7 @@ export default function LanguageDropdown() {
                 setLocale(l.code);
                 setOpen(false);
               }}
-              className={`block w-full text-left px-4 py-2 text-sm transition-colors hover:bg-surface ${
+              className={`block w-full text-left px-4 py-3 text-sm transition-colors hover:bg-surface ${
                 locale === l.code
                   ? "text-primary font-semibold"
                   : "text-text-primary"

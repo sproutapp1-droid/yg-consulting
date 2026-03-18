@@ -30,12 +30,12 @@ export default function Footer() {
             <p className="font-semibold mb-4 text-sm uppercase tracking-wider text-white/40">
               {t("footerNavTitle")}
             </p>
-            <nav aria-label="Footer navigation" className="space-y-2">
+            <nav aria-label="Footer navigation" className="space-y-1">
               {NAV_KEYS.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="block text-white/70 hover:text-white transition-colors text-sm"
+                  className="block text-white/70 hover:text-white transition-colors text-sm py-1.5"
                 >
                   {t(link.key)}
                 </a>

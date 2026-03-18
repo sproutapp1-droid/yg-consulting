@@ -16,13 +16,13 @@ const translations = {
     navCta: "Get in Touch",
 
     // Hero
-    heroBadge: "20+ Years in Asia-Pacific Retail",
+    heroBadge: "25+ Years in Asia-Pacific Retail",
     heroHeadline: "Build & Grow Your Brand Across Asia Pacific",
     heroSubheadline:
       "From flagship store openings to full P&L management — strategic retail consulting for luxury and lifestyle brands entering or expanding in China, Hong Kong, and the wider APAC region.",
     heroPrimaryCta: "Get in Touch",
     heroSecondaryCta: "See Services",
-    heroStat1Value: "20+",
+    heroStat1Value: "25+",
     heroStat1Label: "years experience",
     heroStat2Value: "11",
     heroStat2Label: "stores in 3 years",
@@ -40,7 +40,7 @@ const translations = {
     problem1Desc: "Cookie-cutter strategies that ignore local nuance",
     solution1Title: "Tailored APAC strategy",
     solution1Desc:
-      "Custom market entry roadmaps built on 20+ years of on-the-ground experience in China, HK, SEA, Korea, Japan, and Australia",
+      "Custom market entry roadmaps built on 25+ years of on-the-ground experience in China, HK, SEA, Korea, Japan, and Australia",
     problem2Title: "Disconnected from landlords",
     problem2Desc: "Relying on third-party brokers with no direct relationships",
     solution2Title: "Direct landlord relationships",
@@ -228,13 +228,13 @@ const translations = {
     navCta: "联系我们",
 
     // Hero
-    heroBadge: "20+年亚太零售经验",
+    heroBadge: "25+年亚太零售经验",
     heroHeadline: "助力品牌拓展亚太市场",
     heroSubheadline:
       "从旗舰店开业到全面损益管理——为进入或扩展中国、香港及亚太地区的奢侈品和生活方式品牌提供战略零售咨询服务。",
     heroPrimaryCta: "联系我们",
     heroSecondaryCta: "查看服务",
-    heroStat1Value: "20+",
+    heroStat1Value: "25+",
     heroStat1Label: "年经验",
     heroStat2Value: "11",
     heroStat2Label: "家门店 / 3年内",
@@ -440,13 +440,13 @@ const translations = {
     navCta: "聯繫我們",
 
     // Hero
-    heroBadge: "20+年亞太零售經驗",
+    heroBadge: "25+年亞太零售經驗",
     heroHeadline: "助力品牌拓展亞太市場",
     heroSubheadline:
       "從旗艦店開業到全面損益管理——為進入或擴展中國、香港及亞太地區的奢侈品和生活方式品牌提供戰略零售諮詢服務。",
     heroPrimaryCta: "聯繫我們",
     heroSecondaryCta: "查看服務",
-    heroStat1Value: "20+",
+    heroStat1Value: "25+",
     heroStat1Label: "年經驗",
     heroStat2Value: "11",
     heroStat2Label: "家門店 / 3年內",

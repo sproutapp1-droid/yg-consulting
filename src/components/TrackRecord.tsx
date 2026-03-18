@@ -7,7 +7,7 @@ import ScrollFadeIn from "./ui/ScrollFadeIn";
 import SectionHeading from "./ui/SectionHeading";
 
 const STAT_ITEMS: { target: number; suffix: string; labelKey: TranslationKey }[] = [
-  { target: 20, suffix: "+", labelKey: "stat1Label" },
+  { target: 25, suffix: "+", labelKey: "stat1Label" },
   { target: 13, suffix: "", labelKey: "stat2Label" },
   { target: 100, suffix: "+", labelKey: "stat3Label" },
   { target: 6, suffix: "", labelKey: "stat4Label" },
@@ -23,11 +23,11 @@ export default function TrackRecord() {
           <SectionHeading title={t("trackRecordHeadline")} light />
         </ScrollFadeIn>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12">
           {STAT_ITEMS.map((stat, i) => (
             <ScrollFadeIn key={stat.labelKey} delay={0.1 * i}>
               <div className="text-center">
-                <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-accent mb-2">
+                <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-accent mb-2">
                   <StatCounter target={stat.target} suffix={stat.suffix} />
                 </p>
                 <p className="text-white/70 text-sm md:text-base">

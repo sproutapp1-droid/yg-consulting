@@ -86,7 +86,7 @@ export default function ExperienceContent() {
           <div className="space-y-12">
             {EXPERIENCES.map((exp, i) => (
               <ScrollFadeIn key={exp.companyKey} delay={0.1 * i}>
-                <div className="relative pl-16 md:pl-20">
+                <div className="relative pl-12 md:pl-20">
                   {/* Timeline dot */}
                   <div className="absolute left-3.5 md:left-5.5 top-1 w-5 h-5 rounded-full bg-primary border-4 border-white shadow-sm" />
 
@@ -98,7 +98,7 @@ export default function ExperienceContent() {
                           {t(exp.companyKey)}
                         </h3>
                         {exp.companyContextKey && (
-                          <span className="inline-block text-xs text-text-secondary bg-surface border border-border px-2.5 py-0.5 rounded-full mt-1.5">
+                          <span className="inline-block text-xs text-text-secondary bg-surface border border-border px-2.5 py-1 rounded-lg mt-1.5 leading-relaxed">
                             {t(exp.companyContextKey)}
                           </span>
                         )}

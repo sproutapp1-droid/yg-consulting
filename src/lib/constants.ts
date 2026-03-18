@@ -1,7 +1,7 @@
 export const SITE_METADATA = {
   title: "YG Consulting — Retail & Brand Strategy for Asia Pacific",
   description:
-    "Strategic consulting for luxury and lifestyle brands entering or expanding across China, Hong Kong, and the Asia-Pacific region. 20+ years of hands-on leadership.",
+    "Strategic consulting for luxury and lifestyle brands entering or expanding across China, Hong Kong, and the Asia-Pacific region. 25+ years of hands-on leadership.",
 };
 
 export const NAV_LINKS = [
@@ -14,7 +14,7 @@ export const NAV_LINKS = [
 export const CONTACT_EMAIL = "yvonnegy21@gmail.com";
 
 export const HERO_CONTENT = {
-  badge: "20+ Years in Asia-Pacific Retail",
+  badge: "25+ Years in Asia-Pacific Retail",
   headline: "Build & Grow Your Brand Across Asia Pacific",
   subheadline:
     "From flagship store openings to full P&L management — strategic retail consulting for luxury and lifestyle brands entering or expanding in China, Hong Kong, and the wider APAC region.",
@@ -23,7 +23,7 @@ export const HERO_CONTENT = {
 };
 
 export const HERO_STATS = [
-  { value: "20+", label: "years experience" },
+  { value: "25+", label: "years experience" },
   { value: "11", label: "stores in 3 years" },
   { value: "13", label: "countries" },
 ];
@@ -50,7 +50,7 @@ export const COMPARISON_ROWS = [
     },
     solution: {
       title: "Tailored APAC strategy",
-      desc: "Custom market entry roadmaps built on 20+ years of on-the-ground experience in China, HK, SEA, Korea, Japan, and Australia",
+      desc: "Custom market entry roadmaps built on 25+ years of on-the-ground experience in China, HK, SEA, Korea, Japan, and Australia",
     },
   },
   {
@@ -139,7 +139,7 @@ export const SERVICES = [
 ];
 
 export const STATS = [
-  { target: 20, suffix: "+", label: "Years of APAC experience" },
+  { target: 25, suffix: "+", label: "Years of APAC experience" },
   { target: 13, suffix: "", label: "Countries managed" },
   { target: 100, suffix: "+", label: "Stores opened & operated" },
   { target: 6, suffix: "", label: "Luxury brands led at C-suite / VP level" },

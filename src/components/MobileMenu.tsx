@@ -43,18 +43,18 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
       />
 
       <div
-        className={`fixed top-0 right-0 h-full w-72 bg-white z-[70] shadow-xl transform transition-transform md:hidden ${
+        className={`fixed top-0 right-0 h-full w-[85vw] max-w-72 bg-white z-[70] shadow-xl transform transition-transform md:hidden ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
         role="dialog"
         aria-modal="true"
         aria-label="Mobile navigation"
       >
-        <div className="flex items-center justify-between p-4 border-b border-border">
+        <div className="flex items-center justify-between p-4 pt-10 border-b border-border">
           <span className="font-serif text-lg font-bold text-primary">
             YG Consulting
           </span>
-          <button onClick={onClose} aria-label="Close menu" className="p-2">
+          <button onClick={onClose} aria-label="Close menu" className="p-3">
             <X className="w-5 h-5" />
           </button>
         </div>

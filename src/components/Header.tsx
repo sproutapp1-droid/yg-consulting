@@ -58,7 +58,7 @@ export default function Header() {
         <div className="flex items-center gap-2 md:hidden">
           <LanguageDropdown />
           <button
-            className="p-2"
+            className="p-3"
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
           >
