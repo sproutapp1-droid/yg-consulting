@@ -22,10 +22,12 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  metadataBase: new URL("https://yg-consulting.vercel.app"),
   openGraph: {
     title: SITE_METADATA.title,
     description: SITE_METADATA.description,
     type: "website",
+    url: "https://yg-consulting.vercel.app",
   },
 };
 
