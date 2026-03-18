@@ -3,25 +3,57 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #1B4D3E;
+  --primary-light: #2A6B54;
+  --accent: #3ECF8E;
+  --bg-dark: #0F2E23;
+  --text-primary: #1A1A1A;
+  --text-secondary: #6B7280;
+  --surface: #F8FAF9;
+  --border: #E2E8E5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-primary);
+  font-family: var(--font-inter), system-ui, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: white;
+}
+
+.skip-to-content:focus {
+  left: 0;
+}
+
+/* Trust bar auto-scroll */
+.trust-scroll-container {
+  display: flex;
+  width: max-content;
+}
+
+.trust-scroll-container:hover {
+  animation-play-state: paused;
 }
