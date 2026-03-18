@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { CONTACT_EMAIL } from "@/lib/constants";
 import { useI18n } from "@/lib/i18n-context";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import MobileMenu from "./MobileMenu";
@@ -23,7 +22,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-8 left-0 right-0 z-40 transition-all duration-300 ${
         scrolled
           ? "bg-white/95 backdrop-blur-md shadow-sm"
           : "bg-transparent"
@@ -49,7 +48,7 @@ export default function Header() {
           ))}
           <LanguageDropdown />
           <a
-            href={`mailto:${CONTACT_EMAIL}`}
+            href="#contact"
             className="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-primary-light transition-colors"
           >
             {t("navCta")}

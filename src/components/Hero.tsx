@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CONTACT_EMAIL } from "@/lib/constants";
 import { useI18n } from "@/lib/i18n-context";
 import ScrollFadeIn from "./ui/ScrollFadeIn";
 
@@ -16,7 +15,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden bg-gradient-to-b from-[#E8F5EF] to-white">
+    <section className="relative pt-32 md:pt-40 pb-16 md:pb-24 overflow-hidden bg-gradient-to-b from-[#E8F5EF] to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <ScrollFadeIn>
@@ -32,7 +31,7 @@ export default function Hero() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href={`mailto:${CONTACT_EMAIL}`}
+                  href="#contact"
                   className="bg-primary text-white px-8 py-3.5 rounded-full font-medium hover:bg-primary-light transition-colors"
                 >
                   {t("heroPrimaryCta")}

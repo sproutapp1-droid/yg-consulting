@@ -8,6 +8,7 @@ import SectionHeading from "./ui/SectionHeading";
 
 interface ExperienceItem {
   companyKey: TranslationKey;
+  companyContextKey?: TranslationKey;
   roleKey: TranslationKey;
   periodKey: TranslationKey;
   descKey: TranslationKey;
@@ -17,6 +18,7 @@ interface ExperienceItem {
 const EXPERIENCES: ExperienceItem[] = [
   {
     companyKey: "exp1Company",
+    companyContextKey: "exp1CompanyContext",
     roleKey: "exp1Role",
     periodKey: "exp1Period",
     descKey: "exp1Desc",
@@ -24,20 +26,23 @@ const EXPERIENCES: ExperienceItem[] = [
   },
   {
     companyKey: "exp2Company",
+    companyContextKey: "exp2CompanyContext",
     roleKey: "exp2Role",
     periodKey: "exp2Period",
     descKey: "exp2Desc",
-    highlightKeys: ["exp2Highlight1", "exp2Highlight2", "exp2Highlight3"],
+    highlightKeys: ["exp2Highlight1", "exp2Highlight2", "exp2Highlight3", "exp2Highlight4"],
   },
   {
     companyKey: "exp3Company",
+    companyContextKey: "exp3CompanyContext",
     roleKey: "exp3Role",
     periodKey: "exp3Period",
     descKey: "exp3Desc",
-    highlightKeys: ["exp3Highlight1", "exp3Highlight2", "exp3Highlight3"],
+    highlightKeys: ["exp3Highlight1", "exp3Highlight2", "exp3Highlight3", "exp3Highlight4"],
   },
   {
     companyKey: "exp4Company",
+    companyContextKey: "exp4CompanyContext",
     roleKey: "exp4Role",
     periodKey: "exp4Period",
     descKey: "exp4Desc",
@@ -45,10 +50,11 @@ const EXPERIENCES: ExperienceItem[] = [
   },
   {
     companyKey: "exp5Company",
+    companyContextKey: "exp5CompanyContext",
     roleKey: "exp5Role",
     periodKey: "exp5Period",
     descKey: "exp5Desc",
-    highlightKeys: ["exp5Highlight1", "exp5Highlight2", "exp5Highlight3"],
+    highlightKeys: ["exp5Highlight1", "exp5Highlight2", "exp5Highlight3", "exp5Highlight4"],
   },
 ];
 
@@ -56,7 +62,7 @@ export default function ExperienceContent() {
   const { t } = useI18n();
 
   return (
-    <section className="pt-28 md:pt-36 pb-20 md:pb-28 bg-gradient-to-b from-[#E8F5EF] to-white">
+    <section className="pt-36 md:pt-44 pb-20 md:pb-28 bg-gradient-to-b from-[#E8F5EF] to-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollFadeIn>
           <a
@@ -91,6 +97,11 @@ export default function ExperienceContent() {
                         <h3 className="font-serif text-xl md:text-2xl font-bold text-text-primary">
                           {t(exp.companyKey)}
                         </h3>
+                        {exp.companyContextKey && (
+                          <span className="inline-block text-xs text-text-secondary bg-surface border border-border px-2.5 py-0.5 rounded-full mt-1.5">
+                            {t(exp.companyContextKey)}
+                          </span>
+                        )}
                         <p className="text-primary font-medium mt-1">
                           {t(exp.roleKey)}
                         </p>
