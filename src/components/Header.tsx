@@ -1,14 +1,25 @@
 "use client";
 
 import { useState } from "react";
-import { NAV_LINKS, CONTACT_EMAIL } from "@/lib/constants";
+import { CONTACT_EMAIL } from "@/lib/constants";
+import { useI18n } from "@/lib/i18n-context";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import MobileMenu from "./MobileMenu";
+import LanguageDropdown from "./LanguageDropdown";
 import { Menu } from "lucide-react";
+
+const NAV_KEYS = [
+  { key: "navAbout" as const, href: "#about" },
+  { key: "viewExperience" as const, href: "/experience" },
+  { key: "navServices" as const, href: "#services" },
+  { key: "navTrackRecord" as const, href: "#track-record" },
+  { key: "navHowItWorks" as const, href: "#how-it-works" },
+];
 
 export default function Header() {
   const scrolled = useScrollPosition(50);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t } = useI18n();
 
   return (
     <header
@@ -27,32 +38,34 @@ export default function Header() {
         </a>
 
         <div className="hidden md:flex items-center gap-8">
-          {NAV_LINKS.map((link) => (
+          {NAV_KEYS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                scrolled ? "text-text-primary" : "text-text-primary"
-              }`}
+              className="text-sm font-medium transition-colors hover:text-primary text-text-primary"
             >
-              {link.label}
+              {t(link.key)}
             </a>
           ))}
+          <LanguageDropdown />
           <a
             href={`mailto:${CONTACT_EMAIL}`}
             className="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-primary-light transition-colors"
           >
-            Get in Touch
+            {t("navCta")}
           </a>
         </div>
 
-        <button
-          className="md:hidden p-2"
-          onClick={() => setMenuOpen(true)}
-          aria-label="Open menu"
-        >
-          <Menu className="w-6 h-6 text-text-primary" />
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <LanguageDropdown />
+          <button
+            className="p-2"
+            onClick={() => setMenuOpen(true)}
+            aria-label="Open menu"
+          >
+            <Menu className="w-6 h-6 text-text-primary" />
+          </button>
+        </div>
       </nav>
 
       <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />

@@ -1,8 +1,17 @@
 "use client";
 
 import { useEffect } from "react";
-import { NAV_LINKS, CONTACT_EMAIL } from "@/lib/constants";
+import { CONTACT_EMAIL } from "@/lib/constants";
+import { useI18n } from "@/lib/i18n-context";
 import { X } from "lucide-react";
+
+const NAV_KEYS = [
+  { key: "navAbout" as const, href: "#about" },
+  { key: "viewExperience" as const, href: "/experience" },
+  { key: "navServices" as const, href: "#services" },
+  { key: "navTrackRecord" as const, href: "#track-record" },
+  { key: "navHowItWorks" as const, href: "#how-it-works" },
+];
 
 interface MobileMenuProps {
   open: boolean;
@@ -10,6 +19,8 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ open, onClose }: MobileMenuProps) {
+  const { t } = useI18n();
+
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
@@ -23,7 +34,6 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
 
   return (
     <>
-      {/* Backdrop */}
       <div
         className={`fixed inset-0 bg-black/40 z-40 transition-opacity md:hidden ${
           open ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -32,7 +42,6 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
         aria-hidden="true"
       />
 
-      {/* Drawer */}
       <div
         className={`fixed top-0 right-0 h-full w-72 bg-white z-50 transform transition-transform md:hidden ${
           open ? "translate-x-0" : "translate-x-full"
@@ -51,21 +60,21 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
         </div>
 
         <nav className="p-6 flex flex-col gap-4">
-          {NAV_LINKS.map((link) => (
+          {NAV_KEYS.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={onClose}
               className="text-lg font-medium text-text-primary hover:text-primary transition-colors"
             >
-              {link.label}
+              {t(link.key)}
             </a>
           ))}
           <a
             href={`mailto:${CONTACT_EMAIL}`}
             className="mt-4 bg-primary text-white px-5 py-3 rounded-full text-center font-medium hover:bg-primary-light transition-colors"
           >
-            Get in Touch
+            {t("navCta")}
           </a>
         </nav>
       </div>

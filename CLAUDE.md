@@ -52,5 +52,12 @@ public/
 - Surface: `#F8FAF9`
 - Fonts: Playfair Display (serif headings), Inter (body)
 
+## i18n (Internationalization)
+The site supports EN, Simplified Chinese (zh-CN), and Traditional Chinese (zh-TW) via a language dropdown in the header.
+- Translations live in `src/lib/translations.ts`
+- Context provider in `src/lib/i18n-context.tsx`
+- **Every new addition or update must include translations for all three languages.**
+- Components use `useI18n()` hook → `t("keyName")` to access translated strings.
+
 ## Content Editing
-All copy lives in `src/lib/constants.ts`. Edit that file to change any text, stats, services, or process steps.
+All copy lives in `src/lib/translations.ts` (for i18n strings) and `src/lib/constants.ts` (for non-translatable data like email, brand names). Edit those files to change any text, stats, services, or process steps.

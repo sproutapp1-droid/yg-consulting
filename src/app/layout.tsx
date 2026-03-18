@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { SITE_METADATA } from "@/lib/constants";
+import { I18nProvider } from "@/lib/i18n-context";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -36,10 +37,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body className="font-sans antialiased">
-        <a href="#main" className="skip-to-content">
-          Skip to content
-        </a>
-        {children}
+        <I18nProvider>
+          <a href="#main" className="skip-to-content">
+            Skip to content
+          </a>
+          {children}
+        </I18nProvider>
       </body>
     </html>
   );

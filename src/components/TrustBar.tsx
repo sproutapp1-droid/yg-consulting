@@ -1,23 +1,24 @@
 "use client";
 
 import { TRUST_BRANDS } from "@/lib/constants";
+import { useI18n } from "@/lib/i18n-context";
 import ScrollFadeIn from "./ui/ScrollFadeIn";
 
 export default function TrustBar() {
+  const { t } = useI18n();
+
   return (
     <section className="py-12 md:py-16 bg-surface border-y border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollFadeIn>
           <p className="text-center text-sm text-text-secondary font-medium uppercase tracking-wider mb-8">
-            Trusted by leading global brands
+            {t("trustHeadline")}
           </p>
         </ScrollFadeIn>
       </div>
 
-      {/* Auto-scrolling brand marquee */}
       <div className="overflow-hidden">
         <div className="trust-scroll-container animate-scroll-left">
-          {/* Duplicate brands for seamless loop */}
           {[...TRUST_BRANDS, ...TRUST_BRANDS].map((brand, i) => (
             <span
               key={`${brand}-${i}`}
