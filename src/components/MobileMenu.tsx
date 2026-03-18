@@ -6,11 +6,11 @@ import { useI18n } from "@/lib/i18n-context";
 import { X } from "lucide-react";
 
 const NAV_KEYS = [
-  { key: "navAbout" as const, href: "#about" },
+  { key: "navAbout" as const, href: "/#about" },
   { key: "viewExperience" as const, href: "/experience" },
-  { key: "navServices" as const, href: "#services" },
-  { key: "navTrackRecord" as const, href: "#track-record" },
-  { key: "navHowItWorks" as const, href: "#how-it-works" },
+  { key: "navServices" as const, href: "/#services" },
+  { key: "navTrackRecord" as const, href: "/#track-record" },
+  { key: "navHowItWorks" as const, href: "/#how-it-works" },
 ];
 
 interface MobileMenuProps {

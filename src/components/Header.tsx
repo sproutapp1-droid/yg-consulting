@@ -8,11 +8,11 @@ import LanguageDropdown from "./LanguageDropdown";
 import { Menu } from "lucide-react";
 
 const NAV_KEYS = [
-  { key: "navAbout" as const, href: "#about" },
+  { key: "navAbout" as const, href: "/#about" },
   { key: "viewExperience" as const, href: "/experience" },
-  { key: "navServices" as const, href: "#services" },
-  { key: "navTrackRecord" as const, href: "#track-record" },
-  { key: "navHowItWorks" as const, href: "#how-it-works" },
+  { key: "navServices" as const, href: "/#services" },
+  { key: "navTrackRecord" as const, href: "/#track-record" },
+  { key: "navHowItWorks" as const, href: "/#how-it-works" },
 ];
 
 export default function Header() {
@@ -32,7 +32,7 @@ export default function Header() {
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20"
         aria-label="Main navigation"
       >
-        <a href="#" className="font-serif text-xl md:text-2xl font-bold text-primary">
+        <a href="/" className="font-serif text-xl md:text-2xl font-bold text-primary">
           YG Consulting
         </a>
 
@@ -48,7 +48,7 @@ export default function Header() {
           ))}
           <LanguageDropdown />
           <a
-            href="#contact"
+            href="/#contact"
             className="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-primary-light transition-colors"
           >
             {t("navCta")}
