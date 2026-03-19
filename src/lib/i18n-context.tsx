@@ -3,7 +3,7 @@
 import { createContext, useContext, useState, useCallback, useEffect } from "react";
 import { type Locale, type TranslationKey, getTranslations } from "./translations";
 
-const SUPPORTED_LOCALES: Locale[] = ["en", "zh-CN", "zh-TW"];
+const SUPPORTED_LOCALES: Locale[] = ["en", "zh-CN", "zh-TW", "it", "ko", "fr", "ja", "es"];
 const LOCALE_STORAGE_KEY = "yg-locale";
 
 function detectLocale(): Locale {
@@ -26,6 +26,11 @@ function detectLocale(): Locale {
       // Generic Chinese defaults to Simplified
       if (tag === "zh" || tag.startsWith("zh-")) return "zh-CN";
       if (tag.startsWith("en")) return "en";
+      if (tag.startsWith("it")) return "it";
+      if (tag.startsWith("ko")) return "ko";
+      if (tag.startsWith("fr")) return "fr";
+      if (tag.startsWith("ja")) return "ja";
+      if (tag.startsWith("es")) return "es";
     }
   }
 

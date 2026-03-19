@@ -53,10 +53,19 @@ public/
 - Fonts: Playfair Display (serif headings), Inter (body)
 
 ## i18n (Internationalization)
-The site supports EN, Simplified Chinese (zh-CN), and Traditional Chinese (zh-TW) via a language dropdown in the header.
+The site supports 8 languages via a language dropdown in the header, with auto-detection from browser settings:
+- EN (English)
+- zh-CN (Simplified Chinese)
+- zh-TW (Traditional Chinese)
+- IT (Italian)
+- KO (Korean)
+- FR (French)
+- JA (Japanese)
+- ES (Spanish)
+
 - Translations live in `src/lib/translations.ts`
-- Context provider in `src/lib/i18n-context.tsx`
-- **Every new addition or update must include translations for all three languages.**
+- Context provider in `src/lib/i18n-context.tsx` (includes `detectLocale()` for auto-detection)
+- **Every new addition or update must include translations for all 8 languages.**
 - Components use `useI18n()` hook → `t("keyName")` to access translated strings.
 
 ## Content Editing

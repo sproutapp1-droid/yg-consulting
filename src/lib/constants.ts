@@ -24,7 +24,7 @@ export const HERO_CONTENT = {
 
 export const HERO_STATS = [
   { value: "25+", label: "years experience" },
-  { value: "11", label: "stores in 3 years" },
+  { value: "100+", label: "stores opened" },
   { value: "13", label: "countries" },
 ];
 
@@ -70,7 +70,7 @@ export const COMPARISON_ROWS = [
     },
     solution: {
       title: "End-to-end execution",
-      desc: "From lease negotiation to VM installation, staff hiring to launch-day operations — managed directly",
+      desc: "From lease negotiation to VM installation, marketing, staff hiring to launch-day operations — managed directly",
     },
   },
   {
