@@ -10,6 +10,7 @@ import { Menu } from "lucide-react";
 const NAV_KEYS = [
   { key: "navAbout" as const, href: "/#about" },
   { key: "viewExperience" as const, href: "/experience" },
+  { key: "navExpertise" as const, href: "/expertise" },
   { key: "navServices" as const, href: "/#services" },
   { key: "navTrackRecord" as const, href: "/#track-record" },
   { key: "navHowItWorks" as const, href: "/#how-it-works" },

@@ -5,6 +5,7 @@ import { useI18n } from "@/lib/i18n-context";
 
 const NAV_KEYS = [
   { key: "navAbout" as const, href: "#about" },
+  { key: "navExpertise" as const, href: "/expertise" },
   { key: "navServices" as const, href: "#services" },
   { key: "navTrackRecord" as const, href: "#track-record" },
   { key: "navHowItWorks" as const, href: "#how-it-works" },
