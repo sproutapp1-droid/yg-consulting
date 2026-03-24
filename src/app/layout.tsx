@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { SITE_METADATA } from "@/lib/constants";
 import { I18nProvider } from "@/lib/i18n-context";
+import { generateOrganizationSchema } from "@/lib/structured-data";
 
 const GA_ID = "G-TWWLX199HV";
 
@@ -23,14 +24,24 @@ export const metadata: Metadata = {
   title: SITE_METADATA.title,
   description: SITE_METADATA.description,
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/apple-icon.svg", type: "image/svg+xml" },
+    ],
   },
   metadataBase: new URL("https://yganconsulting.com"),
+  alternates: {
+    canonical: "https://yganconsulting.com",
+  },
   openGraph: {
     title: SITE_METADATA.title,
     description: SITE_METADATA.description,
     type: "website",
     url: "https://yganconsulting.com",
+    siteName: "YG Consulting",
+    locale: "en_US",
   },
 };
 
@@ -42,6 +53,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateOrganizationSchema()),
+          }}
+        />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"

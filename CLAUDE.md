@@ -88,6 +88,10 @@ The site supports 8 languages via a language dropdown in the header, with auto-d
 - Each expertise page has keyword-optimized `<title>` (< 60 chars) and `<meta description>` (~155 chars)
 - Target keywords: Business Development in Asia, Retail in Asia, Brand Expansion, Start Up Business Asia, Luxury Retail Asia, Fashion Retail Asia
 - Additional SEO keywords woven into body copy: China market entry, APAC retail expansion, luxury brand consulting, landlord negotiation, visual merchandising, franchise/wholesale distribution
+- **Structured Data (JSON-LD)**: Organization schema in layout.tsx, Person schema on home page, ProfessionalService schema on each expertise page. Generated via `src/lib/structured-data.ts`.
+- **FAQ Schema**: Each expertise page has 3 factual Q&As rendered as collapsible `<details>` elements + FAQPage JSON-LD. Data in `expertise-data.ts` `faqs` array.
+- **Canonical tags**: Set via `alternates.canonical` in metadata on every page.
+- **Icons**: Custom YG logo SVGs at `src/app/icon.svg` and `src/app/apple-icon.svg`.
 
 ## File Structure
 ```
@@ -120,7 +124,10 @@ src/
     ExpertiseHub.tsx       — Hub page listing 6 expertise areas as cards
     ExpertisePageLayout.tsx — Shared layout for individual expertise pages
     RelatedExpertise.tsx   — Cross-link card grid for related expertise
-    CTA.tsx                — Green gradient CTA + contact form
+    CTA.tsx                — Green gradient CTA + contact form + social proof strip
+    FloatingCTA.tsx        — Mobile-only sticky "Book a Call" button (appears on scroll)
+    InlineCTA.tsx          — Mid-content CTA banners (social-proof and value-prop variants)
+    ScrollCTA.tsx          — Desktop scroll-triggered slide-in CTA (shows once per session)
     Footer.tsx             — 3-column footer with Expertise link
     AnnouncementBar.tsx    — Rotating announcements
     LanguageDropdown.tsx   — Language switcher
@@ -132,9 +139,10 @@ src/
     useScrollPosition.ts   — Scroll detection for header
   lib/
     constants.ts           — Non-translatable data (email, brand names, stats)
-    translations.ts        — All i18n strings for 8 languages (~2700 lines)
+    translations.ts        — All i18n strings for 8 languages (~3500 lines)
     i18n-context.tsx       — Locale context, browser detection, localStorage
-    expertise-data.ts      — Expertise page config (slugs, keys, stats, related pages, metadata)
+    expertise-data.ts      — Expertise page config (slugs, keys, stats, related pages, metadata, FAQs, CTA keys)
+    structured-data.ts     — JSON-LD schema generators (Organization, Person, ProfessionalService, FAQPage)
 public/
   images/
     yvonne-headshot.jpg

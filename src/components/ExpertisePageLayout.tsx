@@ -15,6 +15,7 @@ import {
   Shirt,
   CheckCircle,
   ArrowLeft,
+  ChevronDown,
 } from "lucide-react";
 
 const ICON_MAP: Record<string, React.ElementType> = {
@@ -134,6 +135,67 @@ export default function ExpertisePageLayout({ page }: ExpertisePageLayoutProps) 
           </div>
         </div>
       </section>
+
+      {/* Contextual CTA */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollFadeIn>
+            <div className="bg-surface rounded-2xl p-8 md:p-10 text-center border border-border">
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-text-primary mb-3">
+                {t(page.ctaHeadlineKey as TranslationKey)}
+              </h3>
+              <p className="text-text-secondary text-lg mb-6">
+                {t("expCtaSubtext" as TranslationKey)}
+              </p>
+              <a
+                href="#contact"
+                className="inline-block bg-primary text-white px-8 py-3.5 rounded-full font-medium hover:bg-primary-light transition-colors mb-5"
+              >
+                {t("expCtaButton" as TranslationKey)}
+              </a>
+              <p className="text-sm text-text-secondary">
+                {t("expCtaTrustedBy" as TranslationKey)}{" "}
+                <span className="text-text-primary font-medium">
+                  Dior · Ferragamo · Canada Goose
+                </span>
+              </p>
+            </div>
+          </ScrollFadeIn>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      {page.faqs && page.faqs.length > 0 && (
+        <section className="py-16 md:py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollFadeIn>
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-text-primary text-center mb-10">
+                {t("faqSectionTitle" as TranslationKey)}
+              </h2>
+            </ScrollFadeIn>
+
+            <div className="space-y-4">
+              {page.faqs.map((faq, i) => (
+                <ScrollFadeIn key={i} delay={i * 0.1}>
+                  <details className="group bg-surface rounded-xl border border-border overflow-hidden">
+                    <summary className="flex items-center justify-between cursor-pointer px-6 py-5 text-left">
+                      <span className="font-medium text-text-primary text-base md:text-lg pr-4">
+                        {t(faq.questionKey as TranslationKey)}
+                      </span>
+                      <ChevronDown className="w-5 h-5 text-text-secondary flex-shrink-0 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <div className="px-6 pb-5">
+                      <p className="text-text-secondary leading-relaxed text-base">
+                        {t(faq.answerKey as TranslationKey)}
+                      </p>
+                    </div>
+                  </details>
+                </ScrollFadeIn>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Proof Points — Stats + Brands */}
       <section className="py-16 md:py-20 bg-primary">

@@ -37,7 +37,7 @@ export default function Hero() {
                   {t("heroPrimaryCta")}
                 </a>
                 <a
-                  href="#services"
+                  href="/expertise"
                   className="border-2 border-primary text-primary px-8 py-3.5 rounded-full font-medium hover:bg-primary hover:text-white transition-colors"
                 >
                   {t("heroSecondaryCta")}

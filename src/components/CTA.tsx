@@ -47,7 +47,13 @@ export default function CTA() {
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               {t("ctaHeadline")}
             </h2>
-            <p className="text-lg text-white/70">{t("ctaSubtext")}</p>
+            <p className="text-lg text-white/70 mb-5">{t("ctaSubtext")}</p>
+            <p className="text-sm text-white/50">
+              {t("ctaTrustedByLeaders")}{" "}
+              <span className="text-white/70">
+                Dior · Ferragamo · Canada Goose · Gucci · YSL
+              </span>
+            </p>
           </div>
 
           {status === "sent" ? (

@@ -22,6 +22,11 @@ export interface ExpertisePage {
     title: string;
     description: string;
   };
+  faqs: {
+    questionKey: string;
+    answerKey: string;
+  }[];
+  ctaHeadlineKey: string;
 }
 
 export const EXPERTISE_PAGES: ExpertisePage[] = [
@@ -51,6 +56,12 @@ export const EXPERTISE_PAGES: ExpertisePage[] = [
       title: "Business Development in Asia | YG Consulting",
       description: "Expert business development consulting for Asia Pacific. 25+ years opening 100+ stores across 13 APAC countries. Direct landlord networks in China, Hong Kong, SEA.",
     },
+    faqs: [
+      { questionKey: "expBizDevFaq1Q", answerKey: "expBizDevFaq1A" },
+      { questionKey: "expBizDevFaq2Q", answerKey: "expBizDevFaq2A" },
+      { questionKey: "expBizDevFaq3Q", answerKey: "expBizDevFaq3A" },
+    ],
+    ctaHeadlineKey: "expBizDevCtaHeadline",
   },
   {
     slug: "retail-expert-asia",
@@ -76,8 +87,14 @@ export const EXPERTISE_PAGES: ExpertisePage[] = [
     relatedSlugs: ["business-development-asia", "luxury-retail-asia", "fashion-retail-asia"],
     meta: {
       title: "Retail Expert in Asia | YG Consulting",
-      description: "Asia's trusted retail operations expert. 25+ years of P&L leadership at Dior, Ferragamo, Canada Goose. KPI-driven retail excellence across Hong Kong and APAC.",
+      description: "Hire a proven retail expert in Asia. 25+ years leading P&L at Dior, Ferragamo, Canada Goose across 13 APAC countries. KPI frameworks, team building, operations.",
     },
+    faqs: [
+      { questionKey: "expRetailFaq1Q", answerKey: "expRetailFaq1A" },
+      { questionKey: "expRetailFaq2Q", answerKey: "expRetailFaq2A" },
+      { questionKey: "expRetailFaq3Q", answerKey: "expRetailFaq3A" },
+    ],
+    ctaHeadlineKey: "expRetailCtaHeadline",
   },
   {
     slug: "brand-expansion-asia",
@@ -103,8 +120,14 @@ export const EXPERTISE_PAGES: ExpertisePage[] = [
     relatedSlugs: ["business-development-asia", "startup-business-asia", "luxury-retail-asia"],
     meta: {
       title: "Brand Expansion in Asia | YG Consulting",
-      description: "Expand your brand across Asia Pacific. Market entry strategy, JV buyouts, and team building in China, Korea, Japan, Singapore, and Australia.",
+      description: "Asia brand expansion consultant — 25+ years experience. JV buyouts, market entry, team building across China, Korea, Japan, Singapore. 100+ stores opened.",
     },
+    faqs: [
+      { questionKey: "expBrandExpFaq1Q", answerKey: "expBrandExpFaq1A" },
+      { questionKey: "expBrandExpFaq2Q", answerKey: "expBrandExpFaq2A" },
+      { questionKey: "expBrandExpFaq3Q", answerKey: "expBrandExpFaq3A" },
+    ],
+    ctaHeadlineKey: "expBrandExpCtaHeadline",
   },
   {
     slug: "startup-business-asia",
@@ -132,6 +155,12 @@ export const EXPERTISE_PAGES: ExpertisePage[] = [
       title: "Start Up Business in Asia | YG Consulting",
       description: "Launch your retail business in Asia from zero. Team building, store setup, e-commerce. Built multi-brand operations in Shanghai for Bailian Group.",
     },
+    faqs: [
+      { questionKey: "expStartupFaq1Q", answerKey: "expStartupFaq1A" },
+      { questionKey: "expStartupFaq2Q", answerKey: "expStartupFaq2A" },
+      { questionKey: "expStartupFaq3Q", answerKey: "expStartupFaq3A" },
+    ],
+    ctaHeadlineKey: "expStartupCtaHeadline",
   },
   {
     slug: "luxury-retail-asia",
@@ -157,8 +186,14 @@ export const EXPERTISE_PAGES: ExpertisePage[] = [
     relatedSlugs: ["fashion-retail-asia", "retail-expert-asia", "brand-expansion-asia"],
     meta: {
       title: "Luxury Retail in Asia | YG Consulting",
-      description: "Luxury retail consulting for Asia Pacific. C-suite experience with Dior (€124M), Ferragamo, Gucci, YSL. 200+ luxury brands across China and Hong Kong.",
+      description: "Independent luxury retail consultant for Asia Pacific. C-suite experience with Dior (€124M), Ferragamo, Gucci, YSL. 200+ luxury brands across China and Hong Kong.",
     },
+    faqs: [
+      { questionKey: "expLuxuryFaq1Q", answerKey: "expLuxuryFaq1A" },
+      { questionKey: "expLuxuryFaq2Q", answerKey: "expLuxuryFaq2A" },
+      { questionKey: "expLuxuryFaq3Q", answerKey: "expLuxuryFaq3A" },
+    ],
+    ctaHeadlineKey: "expLuxuryCtaHeadline",
   },
   {
     slug: "fashion-retail-asia",
@@ -186,6 +221,12 @@ export const EXPERTISE_PAGES: ExpertisePage[] = [
       title: "Fashion Retail in Asia | YG Consulting",
       description: "Fashion retail strategy and visual merchandising for Asia. Capsule collections, product curation, and VM. From Joyce Boutique to Ferragamo regional leadership.",
     },
+    faqs: [
+      { questionKey: "expFashionFaq1Q", answerKey: "expFashionFaq1A" },
+      { questionKey: "expFashionFaq2Q", answerKey: "expFashionFaq2A" },
+      { questionKey: "expFashionFaq3Q", answerKey: "expFashionFaq3A" },
+    ],
+    ctaHeadlineKey: "expFashionCtaHeadline",
   },
 ];
 

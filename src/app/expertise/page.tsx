@@ -9,6 +9,9 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: EXPERTISE_HUB_META.title,
   description: EXPERTISE_HUB_META.description,
+  alternates: {
+    canonical: "https://yganconsulting.com/expertise",
+  },
 };
 
 export default function ExpertisePage() {
