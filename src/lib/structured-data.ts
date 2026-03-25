@@ -11,6 +11,10 @@ export function generateOrganizationSchema() {
     logo: "https://yganconsulting.com/favicon.svg",
     description:
       "Strategic consulting for luxury and lifestyle brands entering or expanding across China, Hong Kong, and the Asia-Pacific region.",
+    slogan: "Retail & Brand Strategy for Asia Pacific",
+    sameAs: [
+      "https://www.linkedin.com/in/yvonne-gan-92554138/",
+    ],
     contactPoint: {
       "@type": "ContactPoint",
       email: CONTACT_EMAIL,
@@ -40,6 +44,9 @@ export function generateOrganizationSchema() {
       "Asia Pacific Market Entry",
       "Retail Operations",
       "Visual Merchandising",
+      "Store Operations",
+      "Fashion Retail",
+      "Business Development",
     ],
   };
 }
@@ -52,6 +59,9 @@ export function generatePersonSchema() {
     jobTitle: "Luxury Retail Consultant",
     description:
       "Independent luxury retail consultant with 25+ years of C-suite experience across Asia Pacific. Former President at Giuseppe Zanotti, VP at Canada Goose, Regional Executive Director at Ferragamo.",
+    sameAs: [
+      "https://www.linkedin.com/in/yvonne-gan-92554138/",
+    ],
     worksFor: {
       "@type": "Organization",
       name: "YG Consulting",
@@ -62,15 +72,50 @@ export function generatePersonSchema() {
       name: "York University",
       address: "Ontario, Canada",
     },
+    hasOccupation: [
+      {
+        "@type": "Occupation",
+        name: "General Manager, Asia Pacific",
+        occupationLocation: { "@type": "Country", name: "Hong Kong" },
+        description: "Save The Duck — GM Asia Pacific / Consultant (2024–present)",
+      },
+      {
+        "@type": "Occupation",
+        name: "Vice President, Commercial & Wholesale, Asia Pacific",
+        occupationLocation: { "@type": "Country", name: "Hong Kong" },
+        description: "Canada Goose — VP Commercial & Wholesale, APAC (2022–2023)",
+      },
+      {
+        "@type": "Occupation",
+        name: "President, Asia Pacific",
+        occupationLocation: { "@type": "Country", name: "Hong Kong" },
+        description: "Giuseppe Zanotti — President, Asia Pacific including China (2021–2022)",
+      },
+      {
+        "@type": "Occupation",
+        name: "Deputy General Manager / CEO, The Balancing",
+        occupationLocation: { "@type": "Country", name: "China" },
+        description: "Shanghai Bailian Group — Deputy GM, CEO The Balancing (2018–2021)",
+      },
+      {
+        "@type": "Occupation",
+        name: "Regional Executive Director, Marketing & Merchandising",
+        occupationLocation: { "@type": "Country", name: "Hong Kong" },
+        description: "Salvatore Ferragamo — Regional Executive Director, APAC (2007–2017)",
+      },
+    ],
     knowsLanguage: ["English", "Cantonese", "Mandarin", "French"],
     knowsAbout: [
       "Luxury Retail Strategy",
       "Brand Expansion in Asia",
       "Retail Operations",
+      "Store Operations",
       "P&L Management",
       "Visual Merchandising",
       "Market Entry Strategy",
       "Franchise & Wholesale Distribution",
+      "Fashion Buying",
+      "Business Development in Asia",
     ],
     url: "https://yganconsulting.com",
   };
@@ -97,10 +142,55 @@ export function generateProfessionalServiceSchema(page: {
       "South Korea",
       "Japan",
       "Singapore",
+      "Malaysia",
+      "Thailand",
+      "Indonesia",
       "Australia",
       "Taiwan",
       "Macau",
     ],
+  };
+}
+
+export function generateBreadcrumbSchema(pageName: string, pageSlug: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://yganconsulting.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Expertise",
+        item: "https://yganconsulting.com/expertise",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: pageName,
+        item: `https://yganconsulting.com/expertise/${pageSlug}`,
+      },
+    ],
+  };
+}
+
+export function generateWebSiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "YG Consulting",
+    url: "https://yganconsulting.com",
+    description:
+      "Strategic consulting for luxury and lifestyle brands entering or expanding across China, Hong Kong, and the Asia-Pacific region.",
+    publisher: {
+      "@type": "Organization",
+      name: "YG Consulting",
+    },
   };
 }
 

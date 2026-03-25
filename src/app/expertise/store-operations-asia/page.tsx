@@ -8,7 +8,7 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 
-const page = getExpertiseBySlug("brand-expansion-asia")!;
+const page = getExpertiseBySlug("store-operations-asia")!;
 
 export const metadata: Metadata = {
   title: page.meta.title,
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BrandExpansionAsiaPage() {
+export default function StoreOperationsAsiaPage() {
   return (
     <>
       <script

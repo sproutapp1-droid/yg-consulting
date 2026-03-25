@@ -8,11 +8,16 @@ import StatCounter from "./ui/StatCounter";
 import RelatedExpertise from "./RelatedExpertise";
 import {
   Building2,
+  Building,
   Store,
   Globe,
   Rocket,
   Diamond,
   Shirt,
+  ClipboardList,
+  Scissors,
+  MapPin,
+  Compass,
   CheckCircle,
   ArrowLeft,
   ChevronDown,
@@ -20,11 +25,16 @@ import {
 
 const ICON_MAP: Record<string, React.ElementType> = {
   Building2,
+  Building,
   Store,
   Globe,
   Rocket,
   Diamond,
   Shirt,
+  ClipboardList,
+  Scissors,
+  MapPin,
+  Compass,
 };
 
 interface ExpertisePageLayoutProps {
@@ -108,7 +118,7 @@ export default function ExpertisePageLayout({ page }: ExpertisePageLayoutProps) 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollFadeIn>
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-text-primary text-center mb-12">
-              How Yvonne Helps
+              {t(page.howYvonneHelpsKey as TranslationKey)}
             </h2>
           </ScrollFadeIn>
 

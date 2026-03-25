@@ -4,7 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { SITE_METADATA } from "@/lib/constants";
 import { I18nProvider } from "@/lib/i18n-context";
-import { generateOrganizationSchema } from "@/lib/structured-data";
+import { generateOrganizationSchema, generateWebSiteSchema } from "@/lib/structured-data";
 
 const GA_ID = "G-TWWLX199HV";
 
@@ -57,6 +57,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateOrganizationSchema()),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateWebSiteSchema()),
           }}
         />
         <Script

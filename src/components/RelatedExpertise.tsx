@@ -6,21 +6,31 @@ import { TranslationKey } from "@/lib/translations";
 import ScrollFadeIn from "./ui/ScrollFadeIn";
 import {
   Building2,
+  Building,
   Store,
   Globe,
   Rocket,
   Diamond,
   Shirt,
+  ClipboardList,
+  Scissors,
+  MapPin,
+  Compass,
   ArrowRight,
 } from "lucide-react";
 
 const ICON_MAP: Record<string, React.ElementType> = {
   Building2,
+  Building,
   Store,
   Globe,
   Rocket,
   Diamond,
   Shirt,
+  ClipboardList,
+  Scissors,
+  MapPin,
+  Compass,
 };
 
 interface RelatedExpertiseProps {

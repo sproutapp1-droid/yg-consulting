@@ -73,23 +73,28 @@ The site supports 8 languages via a language dropdown in the header, with auto-d
 |---|---|---|
 | `/` | Home page — hero, trust bar, problem/solution, about, services, track record, how it works, CTA | Done |
 | `/experience` | Experience timeline page — 7 career entries with highlights | Done |
-| `/expertise` | Hub page — 6 expertise area cards with links | Done |
+| `/expertise` | Hub page — 11 expertise areas grouped "By Expertise" (8) and "By Market" (3) | Done |
 | `/expertise/business-development-asia` | SEO page — business development, store openings, landlord networks | Done |
 | `/expertise/retail-expert-asia` | SEO page — retail operations, P&L, KPIs, team building | Done |
 | `/expertise/brand-expansion-asia` | SEO page — JV buyouts, market entry, regional expansion | Done |
 | `/expertise/startup-business-asia` | SEO page — launching from zero, e-commerce, multi-brand retail | Done |
 | `/expertise/luxury-retail-asia` | SEO page — luxury P&L, VIP/CRM, brand portfolio | Done |
 | `/expertise/fashion-retail-asia` | SEO page — VM, capsule collections, fashion buying | Done |
-| `/sitemap.xml` | Dynamic sitemap for yganconsulting.com (9 URLs) | Done |
+| `/expertise/store-operations-asia` | SEO page — KPI frameworks, team training, retail excellence | Done |
+| `/expertise/fashion-specialist-asia` | SEO page — fashion buying, brand curation, creative direction | Done |
+| `/expertise/retail-expansion-china` | SEO page — Shanghai operations, Bailian Group, China e-commerce | Done |
+| `/expertise/retail-expansion-hong-kong` | SEO page — HK-based operations, Joyce Boutique, local networks | Done |
+| `/expertise/retail-expansion-southeast-asia` | SEO page — Singapore, Malaysia, Thailand, Indonesia, Australia | Done |
+| `/sitemap.xml` | Dynamic sitemap for yganconsulting.com (14 URLs) | Done |
 | `/robots.txt` | Robots file pointing to sitemap | Done |
 
 ## SEO & Domain
 - **Domain**: `yganconsulting.com` (set in `metadataBase` in layout.tsx)
 - Each expertise page has keyword-optimized `<title>` (< 60 chars) and `<meta description>` (~155 chars)
-- Target keywords: Business Development in Asia, Retail in Asia, Brand Expansion, Start Up Business Asia, Luxury Retail Asia, Fashion Retail Asia
+- Target keywords: Business Development in Asia, Retail in Asia, Retail Expert in Asia, Brand Expansion, Business Building Asia, Start Up Business Asia, Business Start Up Asia, Luxury Retail Asia, Fashion Retail Asia, Store Operations, Business Management, Fashion Specialist in Asia, Retail Expansion China, Retail Expansion Hong Kong, Retail Expansion Southeast Asia
 - Additional SEO keywords woven into body copy: China market entry, APAC retail expansion, luxury brand consulting, landlord negotiation, visual merchandising, franchise/wholesale distribution
-- **Structured Data (JSON-LD)**: Organization schema in layout.tsx, Person schema on home page, ProfessionalService schema on each expertise page. Generated via `src/lib/structured-data.ts`.
-- **FAQ Schema**: Each expertise page has 3 factual Q&As rendered as collapsible `<details>` elements + FAQPage JSON-LD. Data in `expertise-data.ts` `faqs` array.
+- **Structured Data (JSON-LD)**: Organization schema (with sameAs LinkedIn) + WebSite schema in layout.tsx, Person schema (with sameAs LinkedIn, hasOccupation) on home page, ProfessionalService + BreadcrumbList schema on each expertise page. Generated via `src/lib/structured-data.ts`.
+- **FAQ Schema**: Each original expertise page has 5 factual Q&As, new pages have 3 Q&As — rendered as collapsible `<details>` elements + FAQPage JSON-LD. Data in `expertise-data.ts` `faqs` array.
 - **Canonical tags**: Set via `alternates.canonical` in metadata on every page.
 - **Icons**: Custom YG logo SVGs at `src/app/icon.svg` and `src/app/apple-icon.svg`.
 
@@ -103,13 +108,18 @@ src/
     sitemap.ts             — Dynamic sitemap generator
     robots.ts              — Robots.txt
     experience/page.tsx    — Experience timeline page
-    expertise/page.tsx     — Hub/index page (6 expertise cards)
+    expertise/page.tsx     — Hub/index page (11 expertise cards in 2 groups)
     expertise/business-development-asia/page.tsx
     expertise/retail-expert-asia/page.tsx
     expertise/brand-expansion-asia/page.tsx
     expertise/startup-business-asia/page.tsx
     expertise/luxury-retail-asia/page.tsx
     expertise/fashion-retail-asia/page.tsx
+    expertise/store-operations-asia/page.tsx
+    expertise/fashion-specialist-asia/page.tsx
+    expertise/retail-expansion-china/page.tsx
+    expertise/retail-expansion-hong-kong/page.tsx
+    expertise/retail-expansion-southeast-asia/page.tsx
   components/
     Header.tsx             — Sticky nav with Expertise link
     MobileMenu.tsx         — Slide-out drawer with Expertise link

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getExpertiseBySlug } from "@/lib/expertise-data";
-import { generateProfessionalServiceSchema, generateFAQSchemaFromPage } from "@/lib/structured-data";
+import { generateProfessionalServiceSchema, generateFAQSchemaFromPage, generateBreadcrumbSchema } from "@/lib/structured-data";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Header from "@/components/Header";
 import ExpertisePageLayout from "@/components/ExpertisePageLayout";
@@ -37,6 +37,15 @@ export default function RetailExpertAsiaPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(generateFAQSchemaFromPage(page)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema(
+            page.meta.title.replace(" | YG Consulting", ""),
+            page.slug
+          )),
         }}
       />
       <AnnouncementBar />
